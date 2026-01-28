@@ -1,36 +1,32 @@
 public class Node<E> {
     private E data;
-    public static Node<E> next;
-    public static Node<E> previous;
+    private  Node<E> next;
+    private  Node<E> previous;
+    public E getData(){
+        return data;
+    }
+    public Node<E> getNext(){
+        return next;
+    }
+    public Node<E> getPrevious(){
+        return previous;
+    }
     public Node(E d) {
         data = d;
     }
-    public E getValue() {
-        return data;
-    }
-    public void setValue(E d) {
-        data = d;
-    }
-    public void setNext(Node<E> n) {
-        next = n;
-    }
-    public E getNext() {
-        return next;
-    }
-    public void setPrevious(Node<E> p) {
+    public void setPrevious(Node<E> p){
         previous = p;
     }
-    public E getPrevious() {
-        return previous;
+    public void setNext(Node<E> n){
+        next = n;
     }
-    public String toString() {
-        String stingRingly = data.toString();
-        return stingRingly;
+    public void setData(E d){
+        data = d;
     }
-    public boolean equals(Node<E> nod) {
-        if (nod.equals(data)) {
-            return true;
-        }
-        return false;
+
+
+    public String toString(){
+        String string = data.toString();
+        return string;
     }
 }
